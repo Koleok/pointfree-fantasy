@@ -1,32 +1,33 @@
-"use strict";
+"use strict"
 
-var Constructor = function(f) {
-  var x = function(){
+const Constructor = function(f) {
+  const x = function(){
     if(!(this instanceof x)){
-      var inst = new x();
-      f.apply(inst, arguments);
-      return inst;
+      const inst = new x()
+      f.apply(inst, arguments)
+      return inst
     }
-    f.apply(this, arguments);
-  };
+    f.apply(this, arguments)
+  }
 
-  return x;
-};
-exports.Constructor = Constructor;
-var makeType = function(f) {
-  f = f || function(v){ this.val = v; }
-  return Constructor(f);
-};
-exports.makeType = makeType;
-
-var subClass = function(superclass, constructr) {
-  var x = makeType();
-  x.prototype = new superclass();
-  x.prototype.constructor=constructr; 
-  return x;
+  return x
 }
-exports.subClass = subClass;
+exports.Constructor = Constructor
 
-var K = function(x){return function(){return x;};};
-exports.K = K;var I = function(x){return x;};
-exports.I = I;
+const makeType = function(f) {
+  f = f || function(v){ this.val = v }
+  return Constructor(f)
+}
+exports.makeType = makeType
+
+const subClass = function(superclass, constructr) {
+  const x = makeType()
+  x.prototype = new superclass()
+  x.prototype.constructor=constructr
+  return x
+}
+exports.subClass = subClass
+
+exports.K = x => () => x
+
+exports.I = x => x

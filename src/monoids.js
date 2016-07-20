@@ -17,7 +17,7 @@ class Max extends Constructor {
   }
 
   inspect(f) {
-  	return 'Max('+inspect(this.val)+')'
+    return 'Max('+inspect(this.val)+')'
   }
 }
 
@@ -41,7 +41,7 @@ class Min extends Constructor {
   }
 
   inspect(f) {
-  	return `Min(${inspect(this.val)})`
+    return `Min(${inspect(this.val)})`
   }
 }
 
@@ -60,7 +60,7 @@ class Sum extends Constructor {
   }
 
   inspect(f) {
-  	return `Sum(${inspect(this.val)})`
+    return `Sum(${inspect(this.val)})`
   }
 }
 
@@ -79,7 +79,7 @@ class Product extends Constructor {
   }
 
   inspect(f) {
-  	return `Product(${inspect(this.val)})`
+    return `Product(${inspect(this.val)})`
   }
 }
 
@@ -98,7 +98,7 @@ class Any extends Constructor {
   }
 
   inspect(f) {
-  	return `Any(${inspect(this.val)})`
+    return `Any(${inspect(this.val)})`
   }
 }
 
@@ -117,7 +117,7 @@ class All extends Constructor {
   }
 
   inspect(f) {
-  	return `All(${inspect(this.val)})`
+    return `All(${inspect(this.val)})`
   }
 }
 

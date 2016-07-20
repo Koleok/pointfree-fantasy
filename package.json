@@ -4,7 +4,7 @@
   "description": "Point free wrappers for fantasy land js.",
   "main": "pointfree.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/mocha/bin/_mocha test"
   },
   "repository": {
     "type": "git",
